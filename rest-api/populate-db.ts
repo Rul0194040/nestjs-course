@@ -30,10 +30,6 @@ const MONGODB_CONNECTION_URL = 'mongodb+srv://admin:pwdadmin@cluster0-dvoec.mong
 // Database Name
 const dbName = 'nestjs-course';
 
-
-
-
-
 // Create a new MongoClient
 const client = new MongoClient(MONGODB_CONNECTION_URL);
 

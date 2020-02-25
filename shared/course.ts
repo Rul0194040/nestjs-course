@@ -1,5 +1,5 @@
-
-export interface Course {
+import { Document } from 'mongoose';
+export interface Course extends Document {
   _id: string;
   seqNo:number;
   url:string;

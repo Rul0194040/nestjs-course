@@ -27,6 +27,7 @@
     "@nestjs/common": "^6.5.3",
     "@nestjs/core": "^6.5.3",
     "@nestjs/platform-express": "^6.5.3",
+    "@types/mongoose": "^5.7.1",
     "body-parser": "^1.18.2",
     "class-validator": "^0.10.1",
     "core-js": "^2.4.1",
