@@ -1,15 +1,20 @@
 import { Document } from 'mongoose';
-export interface Course extends Document {
+import { IsString, IsMongoId, IsInt, IsBoolean } from 'class-validator';
+export class Course extends Document {
+  @IsString()
+  @IsMongoId()
   _id: string;
+  @IsInt({message: "must be a number"})
   seqNo:number;
+  @IsString({always: false})
   url:string;
-  iconUrl: string;
-  courseListIcon: string;
-  description: string;
-  longDescription?: string;
-  category: string;
-  lessonsCount: number;
-  promo: boolean;
+  @IsString() iconUrl: string;
+  @IsString() courseListIcon: string;
+  @IsString() description: string;
+  @IsString() longDescription?: string;
+  @IsString() category: string;
+  @IsInt()lessonsCount: number;
+  @IsBoolean()promo: boolean;
 }
 
 

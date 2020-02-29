@@ -1,8 +1,8 @@
-import { Controller, Get, Put, Param, Body, Req, Res, Delete } from "@nestjs/common";
+import { Controller, Get, Put, Param, Body, Delete, UseFilters } from "@nestjs/common";
 import {Course} from "../../../../shared/course";
-import {findAllCourses} from "../../../db-data";
 import { CoursesRepository } from "../repositories/courses.repository";
-import { Request, Response } from "express";
+import { HttpExceptionFilter } from "src/filters/http.filter";
+
 
 @Controller("courses")
 export class CoursesController {
