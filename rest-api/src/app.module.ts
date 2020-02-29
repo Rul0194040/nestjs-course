@@ -6,9 +6,7 @@ import { MONGO_CONNECTION } from "./constants";
 @Module({
   imports: [
     CoursesModule,
-    MongooseModule.forRoot(MONGO_CONNECTION)
+    MongooseModule.forRoot(MONGO_CONNECTION, { useNewUrlParser: true,  useUnifiedTopology: true })
   ]
 })
-export class AppModule {
-
-}
+export class AppModule {}
