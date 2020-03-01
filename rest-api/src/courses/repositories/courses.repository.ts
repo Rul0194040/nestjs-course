@@ -11,7 +11,6 @@ export class CoursesRepository{
   async findAll(): Promise<Course[]>{
     return this.courseModel.find();
   }
-
   async updateCourse(courseId: string, changes: Partial<Course>)
   :Promise<Course> {
     return this.courseModel.findOneAndUpdate(
@@ -20,12 +19,14 @@ export class CoursesRepository{
       {new:true}
       );
   }
-  
   deleteCourse(courseId: string){
     return this.courseModel.deleteOne({_id:courseId});
   }
-
   addCourse(course: Partial<Course>): Promise<Course>{
     return this.courseModel.create(course);
+  }
+
+  async findByUrl(courseUrl: string): Promise<Course>{
+    return this.courseModel.findOne({url: courseUrl});
   }
 }

@@ -1,6 +1,6 @@
+import { Document } from 'mongoose';
 
-
-export interface Lesson {
+export interface Lesson extends Document {
     id: number;
     description: string;
     duration: string;

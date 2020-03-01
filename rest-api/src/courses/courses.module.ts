@@ -3,20 +3,29 @@ import {CoursesController} from "./controllers/courses.controller";
 import { MongooseModule } from "@nestjs/mongoose";
 import { CoursesSchema } from "./schemas/courses.schemas";
 import { CoursesRepository } from "./repositories/courses.repository";
+import { lessonsschema } from "./schemas/lessons.schema";
+import { LessonsRepository } from "./repositories/lessons.repository";
+import { LessonsController } from "./controllers/lessons.controller";
 @Module({
   imports:[
     MongooseModule.forFeature([
       {
         name:"Course",
         schema:CoursesSchema
+      },
+      {
+        name:"Lesson",
+        schema:lessonsschema
       }
     ])
   ],
   controllers: [
-    CoursesController
+    CoursesController,
+    LessonsController
   ],
   providers:([
-    CoursesRepository
+    CoursesRepository,
+    LessonsRepository
   ])
 })
 
