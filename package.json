@@ -34,6 +34,7 @@
     "express": "^4.16.2",
     "moment": "^2.22.2",
     "mongoose": "^5.9.2",
+    "password-hash-and-salt": "^0.1.4",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.0",
     "rxjs": "^6.3.3",

@@ -28,6 +28,8 @@
     "@nestjs/mongoose": "^6.1.2",
     "@nestjs/platform-express": "^6.5.3",
     "@nestjs/websockets": "^6.5.3",
+    "@types/jsonwebtoken": "^8.3.8",
+    "@types/password-hash-and-salt": "^0.1.0",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.10.2",
     "jsonwebtoken": "^8.5.1",
