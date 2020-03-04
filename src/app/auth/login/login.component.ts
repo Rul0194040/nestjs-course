@@ -34,7 +34,8 @@ export class LoginComponent implements OnInit {
   login() {
     const val = this.form.value
     this.auth.login(val.email, val.password).subscribe(
-      ()=>{
+      (reply: any)=>{
+        localStorage.setItem("authJWT",reply.authJWT);
         this.router.navigateByUrl('/courses');
       },
       err =>{

@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
     }
 
     logout() {
-
+      localStorage.removeItem("authJWT");
     }
 
 }
