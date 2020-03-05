@@ -1,9 +1,11 @@
-import { Controller, Get, Put, Param, Body, Delete, UseFilters, NotFoundException } from "@nestjs/common";
+import { Controller, Get, Put, Param, Body, Delete, UseFilters, NotFoundException, UseGuards } from "@nestjs/common";
 import {Course} from "../../../../shared/course";
 import { CoursesRepository } from "../repositories/courses.repository";
+import { AuthGuard } from "src/guards/auth.guards";
 
 
 @Controller("courses")
+@UseGuards(AuthGuard) //guardia de acceso
 export class CoursesController {
 
   constructor(private coursesDB: CoursesRepository){}
